@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import AppPage from "./AppPage";
+import AppPage from "./AppPAge";
 
 class MainPage extends AppPage {
   get header() {

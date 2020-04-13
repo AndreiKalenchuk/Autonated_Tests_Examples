@@ -1,6 +1,6 @@
-import AppPage from '../_page/AppPAge';
-import { newUser } from './registrationData';
-import MainPage from '../_page/MainPage';
+import AppPage from './AppPAge';
+import { newUser } from '../_data/registrationData';
+import MainPage from './MainPage';
 
 class RegistrationPage extends AppPage {
     get firstNameInput() {

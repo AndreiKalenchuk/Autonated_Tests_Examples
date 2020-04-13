@@ -1,9 +1,9 @@
 import { expect } from "chai";
-import Notification from "../_page/Notification";
-import RegistrationPage from "./RegistrstionPage";
-import { H1RegisterPage } from "./registrationData";
-import MainPage from "../_page/MainPage";
-import { H1LoginPage } from "../login/loginData";
+import Notification from "../../_page/Notification";
+import RegistrationPage from "../../_page/RegistrstionPage";
+import { H1RegisterPage } from "../../_data/registrationData";
+import MainPage from "../../_page/MainPage";
+import { H1LoginPage } from "../../_data/loginData";
 
 describe("NEW USER REGISTRATION", () => {
   before("should open Register Page, verify H1 (header)", () => {
