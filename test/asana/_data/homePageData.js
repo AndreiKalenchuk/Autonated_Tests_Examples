@@ -1,8 +1,8 @@
 const homeURL = "https://asana.com/";
 const homePageHeader = "Keep your team organized and connected";
 const homePageTitle = 'Manage your team’s work, projects, & tasks online · Asana';
-const whyAsanaLinkText = "Why Asana?";
-const menuLinksTextArr = ['Why Asana?', 'Solutions', 'Resources', 'Pricing']
+const menuLinksTextArr = ['Why Asana?', 'Solutions', 'Resources']
+
 const tryForFreeBtn = {
   textA: "Try for free",
   textB: "",
@@ -10,4 +10,9 @@ const tryForFreeBtn = {
   countTotal: 6,
   countVisible: 2
 };
-export { tryForFreeBtn, homeURL, whyAsanaLinkText, homePageHeader, homePageTitle, menuLinksTextArr, };
+
+const subMenuDropDownLinks = {
+  count : 45,
+}
+export { tryForFreeBtn, homeURL, homePageHeader, homePageTitle,
+  menuLinksTextArr, subMenuDropDownLinks, };

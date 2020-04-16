@@ -18,19 +18,20 @@ describe("HOME PAGE MENU LINKS", () => {
     );
   });
 
-  it("should verify text", () => {
-    for (let i = 0; i < HomePage.menuLinksList.length; i++) {
-      expect(HomePage.menuLinksList[i].getText()).eq(menuLinksTextArr[i]);
+  it("should verify menu links text", () => {
+    const el = HomePage.menuLinksList;
+    for (let i = 0; i < el.length; i++) {
+      expect(el[i].getText()).eq(menuLinksTextArr[i]);
     }
   });
 
-  it("should verify it is Clickable", () => {
+  it("should verify menu links is Clickable", () => {
     HomePage.menuLinksList.forEach(el => expect(el.isClickable()).true);
   });
 
-  it("click on it should drop down sub menu links", () => {
+  it("click on menu links should drop down sub menu links", () => {
     const el = HomePage.menuLinksList;
-    for (let i = 0; i < el.length - 1; i++) {
+    for (let i = 0; i < el.length; i++) {
       el[i].click();
       browser.pause(2000)
       browser.waitUntil(

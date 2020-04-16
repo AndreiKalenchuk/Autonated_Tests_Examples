@@ -1,4 +1,4 @@
-import AppPAge from "../../../_page/AppPAge";
+import AppPAge from "../../pasv/_page/AppPAge";
 
 class HomePage extends AppPAge {
   get header() {
@@ -8,13 +8,19 @@ class HomePage extends AppPAge {
     return $$('[title="Try for free"]');
   }
   get menuLinksList() {
-    return $$('//li[@class="horizontalNavigation__list-item"]');
+    return $$('//button[@role="menuitem"]');
   }
 get subMenuActive(){
   return $('.navigation__dropdown.-active');
 }
-  get dropDownMenuLinksList() {
-    return $$(".navigation__dropdown__item");
+get whyAsanaLink() {
+    return $('#navigation__dropdown-toggle-why-asana');
+}
+  get subMenuDropDownLinksList() {
+    return $$('//a[@role="menuitem"]');
+  }
+  get subMenuDropDownLink() {
+    return $('//a[@role="menuitem"]')
   }
 }
 export default new HomePage();
