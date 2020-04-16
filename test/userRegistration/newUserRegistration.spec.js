@@ -15,11 +15,16 @@ describe("NEW USER REGISTRATION", () => {
     expect(RegistrationPage.submitBtn.isEnabled()).false;
   });
 
+  it('verify all fields are required', () => {
+    browser.waitUntil(() => {
+        return expect(RegistrationPage.requiredFieldsList.forEach(el => el.isDisplayed())).true })
+  });
+
   it("should fill out all fields, click Submit Btn", () => {
     RegistrationPage.registerNewUser();
   });
 
-  it("verify page h1 (header)", () => {
+  it("Redirect to LoginPage, verify h1 (header)", () => {
     MainPage.verifyElementText(MainPage.header, H1LoginPage);
   });
 

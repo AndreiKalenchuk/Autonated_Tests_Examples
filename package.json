@@ -1,36 +1,44 @@
 {
-  "name": "autonated_tests_examples",
+  "name": "pasv-ui",
   "version": "1.0.0",
+  "description": "PASV-UI Project",
   "main": "index.js",
-  "directories": {
-    "scripts": {
-      "test": "./node_modules/.bin/wdio wdio.conf.js"
-    }
-  },
-  "dependencies": {
-    "axios": "^0.19.2",
-    "chai": "^4.2.0"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "@babel/register": "^7.9.0",
-    "@wdio/cli": "^5.18.7",
-    "@wdio/local-runner": "^5.22.4",
-    "@wdio/mocha-framework": "^5.18.7",
-    "@wdio/spec-reporter": "^5.22.4",
-    "@wdio/sync": "^5.20.1",
-    "chromedriver": "^81.0.0",
-    "faker": "^4.1.0",
-    "prettier": "^2.0.4",
-    "wdio-chromedriver-service": "^6.0.1",
-    "wdio-selenium-standalone-service": "0.0.12"
-  },
   "scripts": {
-    "test": "mocha"
+    "test": "wdio wdio.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KatAvdeeva/PASV-UI.git"
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "bugs": {
+    "url": "https://github.com/KatAvdeeva/PASV-UI/issues"
+  },
+  "homepage": "https://github.com/KatAvdeeva/PASV-UI#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/register": "^7.8.3",
+    "@wdio/cli": "^5.18.7",
+    "@wdio/firefox-profile-service": "^6.0.12",
+    "@wdio/local-runner": "^5.18.7",
+    "@wdio/mocha-framework": "^5.18.7",
+    "@wdio/spec-reporter": "^5.18.7",
+    "@wdio/sync": "^5.18.7",
+    "chromedriver": "^80.0.1",
+    "faker": "^4.1.0",
+    "prettier": "1.19.1",
+    "wdio-chromedriver-service": "^5.0.2",
+    "wdio-selenium-standalone-service": "0.0.12"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "chai": "^4.2.0",
+    "firefox-profile": "^2.0.0"
+  },
+  "directories": {
+    "doc": "docs"
+  }
 }
