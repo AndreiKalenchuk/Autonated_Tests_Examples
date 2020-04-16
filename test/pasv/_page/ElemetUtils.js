@@ -2,7 +2,7 @@ export default class ElementUtils {
 ​
 
     getElement(testId) {
-        return browser.$('testId');
+        return $('testId');
     }
 
     elementsAreLoaded(elements, timeout = 10000) {

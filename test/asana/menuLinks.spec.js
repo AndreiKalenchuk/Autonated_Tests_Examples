@@ -33,7 +33,6 @@ describe("HOME PAGE MENU LINKS", () => {
     const el = HomePage.menuLinksList;
     for (let i = 0; i < el.length; i++) {
       el[i].click();
-      browser.pause(2000)
       browser.waitUntil(
         () => expect(HomePage.subMenuActive.isEnabled()).true,
         5000,
