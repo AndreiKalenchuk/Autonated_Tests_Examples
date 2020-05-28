@@ -5,7 +5,7 @@ describe("CLIENT SIDE EXECUTE", () => {
   beforeEach("open home page", () => {
     Page.open;
   });
-  it("change a heading styl", () => {
+  it("change a heading style", () => {
     const newTitle = "Some new Title";
     browser.pause(1000);
     browser.execute(
