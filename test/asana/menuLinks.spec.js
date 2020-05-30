@@ -33,11 +33,11 @@ describe("HOME PAGE MENU LINKS", () => {
     const el = HomePage.menuLinksList;
     for (let i = 0; i < el.length; i++) {
       el[i].click();
-      browser.waitUntil(
-        () => expect(HomePage.subMenuActive.isEnabled()).true,
-        5000,
-        "No sub menu dropped down"
-      );
+      browser.waitUntil(() => {
+        return expect(HomePage.subMenuActive.isEnabled()).true,
+          5000,
+          "No sub menu dropped down";
+      });
       browser.refresh();
     }
   });

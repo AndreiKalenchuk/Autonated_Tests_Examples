@@ -1,6 +1,6 @@
 import { expect } from "chai";
-import Page from "./Page";
-import { linksList } from "./Page";
+import Page from "./LoginPage";
+import { linksList } from "./LoginPage";
 const input = "String";
 
 describe("WAIT FOR ELEMENT", () => {

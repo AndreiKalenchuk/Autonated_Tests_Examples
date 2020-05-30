@@ -1,4 +1,4 @@
-import Page from "./Page";
+import Page from "./LoginPage";
 import { expect } from "chai";
 
 describe("CLIENT SIDE EXECUTE", () => {
