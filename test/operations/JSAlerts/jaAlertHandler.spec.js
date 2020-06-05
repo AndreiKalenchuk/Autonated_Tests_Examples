@@ -1,4 +1,5 @@
 import { expect } from "chai";
+import { assert } from "chai";
 import AlertPage from "./AlertPage";
 
 describe("JS ALERT HANDLER", () => {
@@ -9,8 +10,10 @@ describe("JS ALERT HANDLER", () => {
   it("click on Click for JSAlert Btn ", () => {
     AlertPage.jsAlertBtn.click();
     browser.waitUntil(() => {
-      return expect("I am a JS Alert", "Wrong Alert Msg").eq(
-        AlertPage.getAlertTextMsg()
+      return assert.equal(
+        "I am a JS Alert",
+        AlertPage.getAlertTextMsg(),
+        "Wrong Alert Msg"
       );
     });
     browser.acceptAlert();
@@ -21,11 +24,10 @@ describe("JS ALERT HANDLER", () => {
 
   it("click on Confirm Btn ", () => {
     AlertPage.jsConfirmBtn.click();
-    browser.waitUntil(() => {
-      return expect("I am a JS Confirm", "Wrong Alert Msg").eq(
+    browser.waitUntil(() =>
+      expect("I am a JS Confirm", "Wrong Alert Msg").eq(
         AlertPage.getAlertTextMsg()
-      );
-    });
+    ));
     browser.dismissAlert();
     expect("You clicked: Cancel", "Wrong conformation Msg").eq(
       AlertPage.getConformationMsg()
