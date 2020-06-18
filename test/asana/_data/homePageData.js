@@ -12,7 +12,7 @@ const tryForFreeBtn = {
 };
 
 const subMenuDropDownLinks = {
-  count : 45,
+  count : 46,
 }
 export { tryForFreeBtn, homeURL, homePageHeader, homePageTitle,
   menuLinksTextArr, subMenuDropDownLinks, };

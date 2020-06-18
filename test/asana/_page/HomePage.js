@@ -1,42 +1,41 @@
 import AppPAge from "../../pasv/_page/AppPAge";
 
 class HomePage extends AppPAge {
-  get header() {
-    return $("<h1>");
-  }
+    open(path) {
+        super.open(path);
+    }
 
-  get tryForFreeBtnList() {
-    return $$('[title="Try for free"]');
-  }
+    get header() {
+        return $('.heading');
+    }
 
-  get menuLinksList() {
-    return $$('//button[@role="menuitem"]');
-  }
+    get tryForFreeBtnList() {
+        return $$('[title="Try for free"]');
+    }
 
-  get subMenuActive() {
-    return $(".navigation__dropdown.-active");
-  }
+    get menuLinksList() {
+        return $$('button[role="menuitem"]');
+    }
 
-  get whyAsanaBtnLink() {
-    return $("#navigation__dropdown-toggle-why-asana");
-  }
+    get subMenuActive() {
+        return $(".navigation__dropdown.-active");
+    }
 
-  get solutionsBtnLink() {
-    return $("#navigation__dropdown-toggle-solutions");
-  }
+    get whyAsanaBtnLink() {
+        return $("#navigation__dropdown-toggle-why-asana");
+    }
 
-  get resourcesBtnLink() {
-    return $("#navigation__dropdown-toggle-resources");
-  }
+    get solutionsBtnLink() {
+        return $("#navigation__dropdown-toggle-solutions");
+    }
 
-  get subMenuDropDownLinksList() {
-    return $$('//a[@role="menuitem"]');
-  }
+    get resourcesBtnLink() {
+        return $("#navigation__dropdown-toggle-resources");
+    }
 
-  get subMenuDropDownLink() {
-    return $('//a[@role="menuitem"]');
-  }
-
-
+    get subMenuDropDownLinksList() {
+        return $$('a[role="menuitem"]');
+    }
 }
+
 export default new HomePage();
