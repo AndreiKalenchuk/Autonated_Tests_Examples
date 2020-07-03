@@ -11,7 +11,7 @@ class Page {
         const sortOption = $('[id="s-result-sort-select_3"]');
         sortByBtn.waitForClickable();
         sortByBtn.click();
-        browser.pause(800);
+        sortOption.waitForClickable();
         sortOption.click();
     }
 
@@ -35,16 +35,13 @@ class Page {
             '//h2[contains(text(),"Sponsored products related to this item")]'
         );
         const elCaruselList = $$(".a-carousel-card");
-        browser.pause(500);
         el.scrollIntoView();
-        browser.pause(3000);
         elCaruselList[num].click();
     }
 
     deleteFromCart(num) {
         const el = $$('[value="Delete"]');
         el[num - 1].click();
-        browser.pause(1000);
     }
 
     get printPriceOriginal() {
